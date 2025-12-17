@@ -53,7 +53,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-int largest(int *d1,int *d2,int *d3,int *d4);
+void descending3(int d1,int d2,int d3);
+void desending2(int d1,int d2);
 int main() {
     int n;
     scanf("%d",&n);
@@ -66,28 +67,39 @@ int main() {
     n/=10;
     int d4=n;
     
-    int lrg=largest(&d1,&d2,&d3,&d4);
-    int slrg=largest(&d1,&d2,&d3,&d4);
-    int tlrg=largest(&d1,&d2,&d3,&d4);
-    int flrg=largest(&d1,&d2,&d3,&d4);
-    
-    printf("%d%d%d%d"lrg,slrg,tlrg,flrg);
+        if(d1>=d2 && d1>=d3 && d1>=d4){
+            printf("%d",d1);
+            descending3(d2,d3,d4);
+        }else if(d2>=d1 && d2>=d3 && d2>=d4){
+            printf("%d",d2);
+            descending3(d1,d3,d4);
+        }else if(d3>=d1 && d3>=d2 && d3>=d4){
+            printf("%d",d3);
+            descending3(d1,d2,d4);
+        }else {
+            printf("%d",d4);
+            descending3(d1,d2,d3);
+        }
+    return 0;
 }
 
-int largest(int *d1,int *d2,int *d3,int *d4){
-    int largest=0;
-    if(*d1>=*d2 && *d1>=*d3 && *d1>=d4){
-        largest=d1;
-        *d1=-1;
-    } else if(*d2>=*d1 && *d2>=*d3 && *d2>=*d4){
-        largest=d2;
-        *d2=-1;
-    } else if(*d3>=*d1 && *d3>=*d2 && *d3>=*d1){
-        largest=d3;
-        *d3=-1;
-    } else {
-        largest=d4;
-        *d4=-1;
+void descending3(int d1,int d2,int d3){
+    if(d1>=d2 && d1>=d3){
+        printf("%d",d1);
+        desending2(d2,d3);
+    }else if(d2>=d1 && d2>=d3){
+        printf("%d",d2);
+        desending2(d1,d3);
+    }else {
+        printf("%d",d3);
+        desending2(d1,d2);
     }
-    return largest;
+}
+
+void desending2(int d1,int d2){
+    if(d1>=d2){
+        printf("%d%d",d1,d2);
+    } else{
+        printf("%d%d",d2,d1);
+    }
 }
