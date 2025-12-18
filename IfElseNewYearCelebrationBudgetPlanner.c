@@ -8,7 +8,7 @@
     The number of guests must be greater than 5 and less than or equal to 50.
     At least one of the following conditions must hold:
     The decoration cost is less than 30% of the budget.
-    The total food cost is less than 50% of the budget.
+    The total food cost is less than 50% of the budget. 
     If the number of guests exceeds 25, there must be a music arrangement (i.e., musicCost > 0).
     Input Format
     
