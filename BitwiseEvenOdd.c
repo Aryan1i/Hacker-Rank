@@ -20,7 +20,7 @@
     Sample Output 0
     
     Even
-    Sample Input 1
+    Sample Input 1 
     
     19
     Sample Output 1
