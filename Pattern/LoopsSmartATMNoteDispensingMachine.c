@@ -1,4 +1,4 @@
-//Problem
+//Problem 
 
     /*A new Smart ATM system has been introduced to improve the efficiency of cash withdrawal. Unlike regular ATMs, these machines use a precision dispensing algorithm to minimize the number of currency notes handed to the user.
     
